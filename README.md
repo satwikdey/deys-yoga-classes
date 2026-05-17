@@ -1,14 +1,14 @@
 # Dey's Yoga Classes Website
 
-A modern, minimalistic website for Dey's Yoga Classes built with React.
+A premium yoga class website for Dey's Yoga Classes built with React, Vite, and a small Node email API.
 
 ## Features
 
-- **Modern Design**: Clean, minimalistic interface with smooth animations
+- **Premium Design**: Glassmorphism interface with designer typography and smooth animation
 - **Responsive Layout**: Optimized for desktop, tablet, and mobile devices
 - **Interactive Navigation**: Smooth scrolling between sections
-- **Gallery Section**: Showcases yoga practice images
-- **Contact Form**: Easy way for potential students to get in touch
+- **Gallery Section**: Automatic right-to-left yoga photo carousel
+- **Contact Form**: Sends student inquiries through Elastic Email SMTP
 - **Professional Information**: Complete details about the instructor and services
 
 ## Instructor
@@ -30,7 +30,7 @@ A modern, minimalistic website for Dey's Yoga Classes built with React.
 
 ### Prerequisites
 
-- Node.js (version 14 or higher)
+- Node.js (version 18 or higher)
 - npm or yarn
 
 ### Installation
@@ -40,12 +40,24 @@ A modern, minimalistic website for Dey's Yoga Classes built with React.
 npm install
 ```
 
-2. Start the development server:
+2. Start the website and email API together:
 ```bash
-npm start
+npm run dev
 ```
 
-3. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+3. Open [http://localhost:5173](http://localhost:5173) to view it in the browser.
+
+You can also run the two parts separately:
+```bash
+npm start
+npm run server
+```
+
+### Contact Form Email
+
+The contact form sends email through the local Node API at `/api/contact`.
+
+Create `.env.local` from `.env.local.example` and set the Elastic Email SMTP values before running `npm run dev`. Keep `.env.local` private; it is ignored by git.
 
 ### Building for Production
 
@@ -87,15 +99,18 @@ The project is ready for hosting on various platforms:
 ## Technologies Used
 
 - React 18
+- Vite
+- Node.js email API
+- Nodemailer
 - CSS3 with modern features
 - Responsive design
-- Google Fonts (Inter)
+- Google Fonts
 - Modern JavaScript (ES6+)
 
 ## Design Features
 
-- **Color Scheme**: Purple gradient theme with clean whites and grays
-- **Typography**: Inter font family for modern readability
+- **Color Scheme**: Soft botanical greens, warm gold accents, and luminous glass panels
+- **Typography**: Cormorant Garamond, Italiana, and Plus Jakarta Sans
 - **Animations**: Smooth hover effects and transitions
 - **Layout**: CSS Grid and Flexbox for responsive design
 - **Images**: Optimized yoga practice photos in gallery
